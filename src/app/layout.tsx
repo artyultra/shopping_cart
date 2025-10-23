@@ -1,16 +1,17 @@
 import type { Metadata } from "next";
 import { JetBrains_Mono } from "next/font/google";
-import "../styles/globals.css";
-import LayoutClient from "@/components/LayoutClient/LayoutClient";
+import "@/styles/globals.css";
+import LayoutClient from "@/components/LayoutClient";
+import Navbar from "@/components/Navbar";
 
-const jetBrainsMono = JetBrains_Mono({
+const jetbrainsMono = JetBrains_Mono({
   variable: "--font-jetbrains-mono",
   subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
-  title: "ShopHub",
-  description: "ShopHub odin project assignment",
+  title: "Shopping Cart",
+  description: "Odin Project Shopping Cart Assignment",
 };
 
 export default function RootLayout({
@@ -20,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${jetBrainsMono.variable}`}>
+      <body className={`${jetbrainsMono.variable} antialiased`}>
         <LayoutClient>{children}</LayoutClient>
       </body>
     </html>
